@@ -1,3 +1,5 @@
+
+
 // Focus div based on nav button click
 const singleButton = document.getElementById("singlenav")
 singleButton.addEventListener("click", singleDiv)
