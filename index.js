@@ -70,7 +70,7 @@ app.use(function (req, res, next) {
 
 
 if (args['debug']) {
-    app.get("/app/log/access", (req, res) => {
+    app.get("/app/log/access/", (req, res) => {
         const stmt = db.prepare('SELECT * FROM accesslog').all()
         res.status(200).json(stmt)
     });
@@ -101,6 +101,7 @@ app.get('/app/', (req, res) => {
 app.get('/app/flip/', (req, res) => {
     const flip = coinFlip(req.params.number)
     const output = { "flip": flip }
+    console.log(res.headers)
     res.status(200).send(output)
 });
 
