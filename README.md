@@ -84,13 +84,13 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5555/app/flip/
 ```
 
 #### Response body
 
 ```
-
+{"flip":"heads"}
 ```
 
 #### Response headers
@@ -104,13 +104,13 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5555/app/flips/5
 ```
 
 #### Response body
 
 ```
-
+{"raw":["tails","heads","heads","tails","tails"],"summary":{"tails":3,"heads":2}}
 ```
 
 #### Response headers
@@ -144,13 +144,13 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5555/app/flip/call/tails
 ```
 
 #### Response body
 
 ```
-
+{"call":"tails","flip":"tails","result":"win"}
 ```
 
 #### Response headers
@@ -218,13 +218,13 @@ Keep-Alive: timeout=5
 #### Request cURL
 
 ```
-
+curl http://localhost:5555/app/log/access/
 ```
 
 #### Response body
 
 ```
-
+[{"id":1,"remoteaddr":"::1","remoteuser":null,"time":"1650312792741.0","method":"GET","url":"/app/log/access/","protocol":"http","httpversion":"1.1","secure":null,"status":200,"referer":null,"useragent":"curl/7.71.1"}]
 ```
 
 #### Response headers
