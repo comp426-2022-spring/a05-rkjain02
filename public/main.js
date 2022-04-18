@@ -62,6 +62,7 @@ function coinFlip() {
         .then(function (result) {
             console.log(result);
             document.getElementById("result").innerHTML = result.flip;
+            document.getElementById("flippic").setAttribute("src", "./assets/img/"+result.flip+".png")
             //document.getElementById('singleResult').innerHTML = "The coin flip was" + result.flip
         })
     //console.log(result)
