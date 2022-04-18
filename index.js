@@ -1,7 +1,7 @@
 // Place your server entry point code here
 const express = require('express');
 const app = express()
-const db = require("./database.js")
+const db = require("./src/services/database")
 const fs = require("fs");
 const morgan = require('morgan');
 
