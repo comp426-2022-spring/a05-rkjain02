@@ -142,7 +142,18 @@ async function guessHeads(event) {
         const flips = await guessFlip({ url, guess });
 
         console.log(flips);
-        document.getElementById("actual").innerHTML = "The coin landed on " + flips.flip;
+        const para = document.getElementById("guesspic")
+        para.innerHTML = "Guess: "
+        var img = document.createElement("img")
+        img.src = "./assets/img/" + flips.call + ".png"
+        para.appendChild(img)
+
+        const para2 = document.getElementById("actual")
+        para2.innerHTML = "Actual flip: "
+        var img = document.createElement("img")
+        img.src = "./assets/img/" + flips.flip + ".png"
+        para2.appendChild(img)
+
         document.getElementById("win").innerHTML = "You " + flips.result;
     } catch (error) {
         console.log(error);
@@ -183,7 +194,17 @@ async function guessTails(event) {
         const flips = await guessFlip({ url, guess });
 
         console.log(flips);
-        document.getElementById("actual").innerHTML = "The coin landed on " + flips.flip;
+        const para = document.getElementById("guesspic")
+        para.innerHTML = "Guess: "
+        var img = document.createElement("img")
+        img.src = "./assets/img/" + flips.call + ".png"
+        para.appendChild(img)
+
+        const para2 = document.getElementById("actual")
+        para2.innerHTML = "Actual flip: "
+        var img = document.createElement("img")
+        img.src = "./assets/img/" + flips.flip + ".png"
+        para2.appendChild(img)
         document.getElementById("win").innerHTML = "You " + flips.result;
     } catch (error) {
         console.log(error);
