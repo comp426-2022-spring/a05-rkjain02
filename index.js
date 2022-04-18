@@ -5,6 +5,7 @@ const db = require("./src/services/database")
 const fs = require("fs");
 const morgan = require('morgan');
 app.use(express.static('./public'));
+app.use(express.json());
 
 const args = require("minimist")(process.argv.slice(2))
 //console.log(typeof(args.log))
