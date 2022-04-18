@@ -89,6 +89,7 @@ Keep-Alive: timeout=5
 
 #### Response body
 
+```
 {"flip":"heads"}
 
 ```
