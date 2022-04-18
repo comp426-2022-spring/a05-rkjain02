@@ -91,7 +91,16 @@ async function flipCoins(event) {
         console.log(flips);
         document.getElementById("heads").innerHTML = "Heads: " + flips.summary.heads;
         document.getElementById("tails").innerHTML = "Tails: " + flips.summary.tails;
-        document.getElementById("raw").innerHTML = "Actual Flips: " + flips.raw;
+        const par = document.getElementById("raw")
+        while (par.firstChild) {
+            par.removeChild(par.firstChild);
+        }
+        for(var i=0; i<flips.raw.length; i++) {
+            var img = document.createElement("img")
+            img.src = "./assets/img/" + flips.raw[i] + ".png"
+            par.appendChild(img)
+        }
+        //document.getElementById("raw").innerHTML = "Actual Flips: " + flips.raw;
     } catch (error) {
         console.log(error);
     }
