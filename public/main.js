@@ -51,8 +51,19 @@ function guessDiv() {
 
 }
 
-
 // Flip one coin and show coin image to match result when button clicked
+function coinFlip() {
+    const response = fetch('http://localhost:5555/app/flip/')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (result) {
+            console.log(result);
+            document.getElementById("result").innerHTML = result.flip;
+            //document.getElementById('singleResult').innerHTML = "The coin flip was" + result.flip
+        })
+    //console.log(result)
+}
 
 // Flip multiple coins and show coin images in table as well as summary results
 // Enter number and press button to activate coin flip series
