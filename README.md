@@ -96,7 +96,14 @@ curl http://localhost:5555/app/flip/
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 16
+ETag: W/"10-VYm8Bk1/RW8RGhDXdTwBYk6lbGE"
+Date: Fri, 22 Apr 2022 19:00:54 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flips/:number/ (GET)
@@ -116,7 +123,14 @@ curl http://localhost:5555/app/flips/5
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 81
+ETag: W/"51-FMNL/ptttski0CnmzCMXCMKtjkk"
+Date: Fri, 22 Apr 2022 19:07:19 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flip/coin/ (GET)
@@ -156,7 +170,14 @@ curl http://localhost:5555/app/flip/call/tails
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: application/json; charset=utf-8
+Content-Length: 47
+ETag: W/"2f-JOa34pahI0LRWI9nHfi+YGLHNg8"
+Date: Fri, 22 Apr 2022 19:08:49 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/flip/call/ (POST)
@@ -230,7 +251,15 @@ curl http://localhost:5555/app/log/access/
 #### Response headers
 
 ```
-
+HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Security-Policy: default-src 'none'
+X-Content-Type-Options: nosniff
+Content-Type: application/json; charset=utf-8
+Content-Length: 154
+Date: Fri, 22 Apr 2022 19:10:10 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
 ```
 
 ### /app/log/access/ (GET)
