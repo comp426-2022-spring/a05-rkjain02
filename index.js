@@ -102,7 +102,7 @@ app.get('/app/flip/', (req, res) => {
     const flip = coinFlip(req.params.number)
     const output = { "flip": flip }
     console.log(res.headers)
-    res.status(200).send(output)
+    res.status(200).send(output)  
 });
 
 // post functions
