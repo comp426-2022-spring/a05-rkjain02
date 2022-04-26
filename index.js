@@ -24,7 +24,7 @@ const server = app.listen(port, () => {
     console.log('App listening on port %PORT%'.replace('%PORT%', port))
 });
 
-//console.log(args["debug"])
+//console.log(args["debug"])   
 
 const help = (`
 server.js [options]
