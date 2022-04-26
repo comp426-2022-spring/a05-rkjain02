@@ -9,7 +9,7 @@ app.use(express.json());
 
 const args = require("minimist")(process.argv.slice(2))
 //console.log(typeof(args.log))
-args['port']
+args['port']   
 args['log']
 const port = args.port || 5555;
 var log = false
