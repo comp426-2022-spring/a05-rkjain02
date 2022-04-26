@@ -84,7 +84,7 @@ if (log) {
     //const stmt = db.prepare('SELECT * FROM accesslog').all()
 
     // Set up the access logging middleware
-    app.use(morgan('combined', { stream: accesslog }))
+    app.use(morgan('combined', { stream: accesslog }))  
 }
 
 
